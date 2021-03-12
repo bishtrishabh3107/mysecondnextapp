@@ -8,7 +8,6 @@ export default function useQuestionByCategory({ id }) {
         id
         title
         description
-        body
         date
         questionId
       }

@@ -26,16 +26,15 @@ function Section1() {
     return <div>{error.message}</div>; // error state
   }
   return (
-    <div className="grid grid-cols-4 md:grid-cols-1 sm:grid-cols-1">
-      <div className="m-1 col-span-1">
+    <div className="grid grid-cols-7 md:grid-cols-5 sm:grid-cols-3">
+      <div className="m-1 col-span-2 md:col-span-1 sm:col-span-1">
         <div className="grid grid-cols-1 gap-2">
           {data.categories.map((el) => (
             <SmallCard key={el.id} name={el.name} />
           ))}
         </div>
       </div>
-
-      <div className="flex col-span-3">
+      <div className="flex col-span-5 md:col-span-4 sm:col-span-2">
         <Divider className="sm:invisible sm:h-0" orientation="vertical" />
         <MovingTagLines />
       </div>

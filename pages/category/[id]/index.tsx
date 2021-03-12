@@ -7,6 +7,7 @@ import {
 import 'react-vertical-timeline-component/style.min.css';
 import useQuestionByCategory from 'hooks/useQuestionByCategory';
 import { AiOutlineRollback } from 'react-icons/Ai';
+import { GiBrain } from 'react-icons/gi';
 
 function index() {
   const router = useRouter();
@@ -24,7 +25,7 @@ function index() {
     return <div>{error.message}</div>; // error state
   }
   return (
-    <div>
+    <div className="ml-32 md:ml-0 sm:ml-0">
       <div className="m-3">
         <Link href="/">
           <a>
@@ -35,9 +36,9 @@ function index() {
       <div>
         <VerticalTimeline>
           {data.questions.map((el) => (
-            <div key={el.id}>
+            <div key={el.id} className="mb-5">
               <VerticalTimelineElement
-                className="vertical-timeline-element--work mb-5"
+                className="vertical-timeline-element"
                 contentStyle={{
                   background: 'rgb(33, 150, 243)',
                   color: '#fff',
@@ -47,10 +48,11 @@ function index() {
                 }}
                 date={el.date}
                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                icon={<GiBrain />}
               >
                 <>
                   <Link href={`/questions/${el.questionId}`}>
-                    <h1 className="vertical-timeline-element-title cursor-pointer">
+                    <h1 className="vertical-timeline-element-title cursor-pointer text-blue-900 font-bold">
                       {el.title}
                     </h1>
                   </Link>
@@ -59,7 +61,6 @@ function index() {
                       {el.description}
                     </h4>
                   </Link>
-                  <p>{el.date}</p>
                 </>
               </VerticalTimelineElement>
             </div>

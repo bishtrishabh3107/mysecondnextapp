@@ -11,10 +11,6 @@ export default function Home() {
       <Divider />
       <Section2 />
       <Divider />
-      <Section3 />
-      <Divider />
-      <Section4 />
-      <Divider />
     </div>
   );
 }

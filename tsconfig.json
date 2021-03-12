@@ -22,7 +22,8 @@
     "data/categories.ts",
     "components/organism/Header.js",
     "components/organism/DynamicScreen/TagLine.js",
-    "components/organism/DynamicScreen/MovingTagLines.js"
+    "components/organism/DynamicScreen/MovingTagLines.js",
+    "pages/questions/[id]/index.js"
   ],
   "exclude": ["node_modules"]
 }

@@ -26,11 +26,11 @@ function MovingTagLines() {
   }
 
   return (
-    <div className="mx-5">
-      <div className="mt-5">
+    <div className="mx-2">
+      <div className="mt-4">
         {data.categories.map((el) => (
           <div key={el.id}>
-            <marquee behavior="scroll" direction="left" scrollamount="7">
+            <marquee behavior="scroll" direction="left" scrollamount="5">
               <TagLine name={el.name} />
             </marquee>
           </div>

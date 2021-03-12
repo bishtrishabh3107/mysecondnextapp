@@ -16,11 +16,15 @@ function TagLine({ name }) {
   }
   return (
     <div>
-      <div className="flex flex-row flex-nowrap justify-between mb-8 text-red-400">
+      <div className="flex flex-row flex-nowrap justify-between mb-7 text-red-400">
         {data.questions.map((el) => (
-          <Link href={`/questions/${el.questionId}`}>
-            <h1 className="mx-3 cursor-pointer">{el.tag_line}</h1>
-          </Link>
+          <div key={el.id}>
+            <Link href={`/questions/${el.questionId}`}>
+              <h1 className="mx-3 cursor-pointer font-semibold">
+                {el.tag_line1}
+              </h1>
+            </Link>
+          </div>
         ))}
       </div>
     </div>

@@ -5,7 +5,7 @@ export default function useTagLineByCategory({ name }) {
   const TagLineByCategory = gql`
     query QuestionByCategory {
       questions(where: { question_category: ${category}}) {
-        tag_line
+        tag_line1
         id
         questionId
       }
