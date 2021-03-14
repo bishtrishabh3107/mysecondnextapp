@@ -27,9 +27,9 @@ function Section2() {
   if (error) {
     return <div>{error.message}</div>; // error state
   }
-  const imageConcat = (imageUrl) => {
-    return 'http://localhost:1337'.concat(imageUrl);
-  };
+  // const imageConcat = (imageUrl) => {
+  //   return 'https://upayam.herokuapp.com'.concat(imageUrl);
+  // };
 
   return (
     <>
@@ -42,7 +42,7 @@ function Section2() {
             key={el.questionId}
             questionId={el.questionId}
             title={el.title}
-            imageUrl={imageConcat(el.image.url)}
+            imageUrl={el.image.url}
           />
         ))}
       </div>

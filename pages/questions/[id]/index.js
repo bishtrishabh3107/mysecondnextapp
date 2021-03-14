@@ -6,18 +6,18 @@ import { useQuery } from '@apollo/client';
 import ClapButton from 'react-clap-button';
 import { AiOutlineRollback } from 'react-icons/Ai';
 import Image from 'next/image';
-import { FcDonate } from 'react-icons/fc';
 import { FcComments } from 'react-icons/fc';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import RadioButtonVisibility from '../../../components/organ/RadioButtonVisibility';
+import RazorpayPayment from '../../../components/organ/RazorpayPayment';
 
 function index() {
   const router = useRouter();
   const { id } = router.query;
 
-  const imageConcat = (imageUrl) => {
-    return 'http://localhost:1337'.concat(imageUrl);
-  };
+  // const imageConcat = (imageUrl) => {
+  //   return 'https://upayam.herokuapp.com'.concat(imageUrl);
+  // };
   const QuestionByIdQuery = gql`
   query QuestionByIdQuery {
     questions(where:{questionId:${id}}) {
@@ -80,7 +80,7 @@ function index() {
             </div>
             <div>
               <Image
-                src={imageConcat(el.image.url)}
+                src={el.image.url}
                 width={1000}
                 height={500}
                 layout="responsive"
@@ -101,7 +101,7 @@ function index() {
 
               <section id="engagement">
                 <Image
-                  src={imageConcat(el.engagement_image.url)}
+                  src={el.engagement_image.url}
                   width={1000}
                   height={500}
                   layout="responsive"
@@ -115,7 +115,7 @@ function index() {
               </section>
               <section id="DevelopmentCycle">
                 <Image
-                  src={imageConcat(el.development_cycle_image.url)}
+                  src={el.development_cycle_image.url}
                   width={1000}
                   height={500}
                   layout="responsive"
@@ -129,7 +129,7 @@ function index() {
               </section>
               <section id="FutureCurve">
                 <Image
-                  src={imageConcat(el.future_curve_image.url)}
+                  src={el.future_curve_image.url}
                   width={1000}
                   height={500}
                   layout="responsive"
@@ -151,12 +151,12 @@ function index() {
                 onCountChange={onCountChange}
                 iconComponent={(props) => <ClapButton {...props} size={34} />}
               />
-              <div className="text-4xl m-3">
-                <FcDonate />
+              <div className="text-4xl m-3 mt-8">
+                <RazorpayPayment />
               </div>
-              <div className="text-4xl m-3">
+              {/* <div className="text-4xl m-3">
                 <FcComments />
-              </div>
+              </div> */}
             </div>
           </div>
         ))}
