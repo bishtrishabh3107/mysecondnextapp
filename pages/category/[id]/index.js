@@ -6,7 +6,7 @@ import {
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import useQuestionByCategory from 'hooks/useQuestionByCategory';
-import { AiOutlineRollback } from 'react-icons/Ai';
+import { AiOutlineRollback } from 'react-icons/ai';
 import { GiBrain } from 'react-icons/gi';
 
 function index() {

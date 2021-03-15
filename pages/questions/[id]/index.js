@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { gql } from '@apollo/client';
 import { useQuery } from '@apollo/client';
 import ClapButton from 'react-clap-button';
-import { AiOutlineRollback } from 'react-icons/Ai';
+import { AiOutlineRollback } from 'react-icons/ai';
 import Image from 'next/image';
 import { FcComments } from 'react-icons/fc';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
