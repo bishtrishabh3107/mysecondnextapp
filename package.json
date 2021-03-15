@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "next build && next export",
+    "start": "next start",
+    "postbuild": "next-on-netlify"
   },
   "dependencies": {
     "@apollo/client": "^3.3.7",
@@ -24,6 +25,7 @@
     "graphql-scalars": "^1.7.0",
     "micro": "^9.3.4",
     "next": "^10.0.5",
+    "next-on-netlify": "^2.9.0",
     "next-themes": "0.0.10",
     "node-sass": "^5.0.0",
     "postcss": "^8.2.4",
