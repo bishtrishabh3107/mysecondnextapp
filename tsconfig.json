@@ -23,7 +23,8 @@
     "components/organism/Header.js",
     "components/organism/DynamicScreen/TagLine.js",
     "components/organism/DynamicScreen/MovingTagLines.js",
-    "pages/questions/[id]/index.js"
+    "pages/questions/[id]/index.js",
+    "pages/category/[id]/index.tsx"
   ],
   "exclude": ["node_modules"]
 }
