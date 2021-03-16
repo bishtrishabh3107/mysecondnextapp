@@ -3,5 +3,4 @@ module.exports = {
     domains: ['res.cloudinary.com'],
   },
   target: 'serverless',
-  postbuild: 'next-on-netlify',
 };
